@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背单词</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('background.png'); /* 底层界面背景图片 */
+            background-size: cover; /* 使背景图片覆盖整个页面 */
+            background-position: center; /* 背景图片居中显示 */
+        }
+        
+        .container {
+            text-align: center;
+            width: calc(3 * 150px + 2 * 50px); /* 设置容器宽度为按钮宽度和间距的总和 */
+        }
+        
+        h1 {
+            margin-bottom: 40px; /* 增加标题与按钮之间的间距 */
+            font-size: 2em;
+            color: #333;
+            letter-spacing: 15px; /* 增加字母间距 */
+            display: inline-block;
+            width: 100%; /* 设置标题宽度与容器宽度一致 */
+            text-align: center;
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 50px; /* 增加按钮之间的间距 */
+        }
+        
+        button {
+            width: 150px;
+            height: 150px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: box-shadow 0.3s, transform 0.1s, filter 0.3s;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-size: cover;
+            background-position: center;
+            background-image: url('icon.png'); /* 使用相同的图片作为背景 */
+        }
+        
+        button:hover {
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px); /* 轻微上移效果 */
+            filter: brightness(0.8); /* 悬停时变暗 */
+        }
+        
+        button:active {
+            transform: translateY(4px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            filter: brightness(0.6); /* 点击时更暗 */
+        }
+        
+        button:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* 焦点状态下的边框效果 */
+        }
+        
+        /* 增加设置和翻译按钮的字体间距 */
+        #settings, #translate {
+            letter-spacing: 6px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>i背单词</h1> <!-- 新增标题 -->
+        <div class="buttons">
+            <button id="learn">
+                背 单 词
+            </button>
+            <button id="settings">
+                设 置
+            </button>
+            <button id="translate">
+                翻 译
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <script>
+        document.getElementById('learn').addEventListener('click', function() {
+            alert('背单词功能即将推出！');
+        });
+        
+        document.getElementById('settings').addEventListener('click', function() {
+            alert('设置功能即将推出！');
+        });
+        
+        document.getElementById('translate').addEventListener('click', function() {
+            alert('翻译功能即将推出！');
+        });
+        
+    </script>
+</body>
+
+</html>
